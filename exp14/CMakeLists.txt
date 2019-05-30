@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 2.8)
+project(Average)
+find_package( OpenCV )
+add_executable(Average exp14.cpp)
+include_directories(${PROJECT_SOURCE_DIR}/Column)
+add_subdirectory(Column)
+target_link_libraries(Average Column)
+target_link_libraries(Average ${OpenCV_LIBS})

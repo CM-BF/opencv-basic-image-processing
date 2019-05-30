@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.8)
+project(Strenth)
+find_package( OpenCV )
+add_executable(Strenth exp12.cpp)
+target_link_libraries(Strenth ${OpenCV_LIBS})

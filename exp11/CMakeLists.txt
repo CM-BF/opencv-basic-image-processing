@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.8)
+project( LinearTransformer )
+find_package( OpenCV REQUIRED )
+add_executable( Linear exp11.cpp )
+target_link_libraries( Linear ${OpenCV_LIBS} )

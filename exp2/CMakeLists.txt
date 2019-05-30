@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.8)
+project(Filter)
+find_package( OpenCV )
+add_executable(Filter exp2.cpp)
+target_link_libraries(Filter ${OpenCV_LIBS})
