@@ -89,7 +89,6 @@ int main(int argc, char ** argv)
     Mat Sobel_image;
     
     Sobel_tmpimage.convertTo(Sobel_image, CV_8UC1);
-    cout << Sobel_image << endl;
 
 // ******************** Laplace ********************** //
 

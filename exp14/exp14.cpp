@@ -8,7 +8,7 @@ using namespace cv;
 
 int main(int argc, char ** argv)
 {
-    Mat image = imread(argv[1], IMREAD_GRAYSCALE);
+    Mat image = imread("../../data/pout.bmp", IMREAD_GRAYSCALE);
 
     if(image.empty())
     {

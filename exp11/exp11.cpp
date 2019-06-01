@@ -7,7 +7,7 @@ using namespace cv;
 
 int main(int argc, char** argv)
 {
-    Mat image = imread(argv[1], IMREAD_GRAYSCALE);
+    Mat image = imread("../../data/lena.bmp", IMREAD_GRAYSCALE);
 
     if(image.empty()){
         printf("Could not open the image!\n");
