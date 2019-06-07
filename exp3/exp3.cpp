@@ -81,12 +81,15 @@ int main(int argc, char ** argv)
     Mat Sobel_tmpimage = Sobel_image1.clone();
     for(auto it=Sobel_tmpimage.begin<short>(), it2=Sobel_image2.begin<short>();
         it!=Sobel_tmpimage.end<short>() && it2!=Sobel_image2.end<short>(); it++, it2++){
-        if(*it < *it2){
-            *it = *it2;
+        if(abs(*it) < abs(*it2)){
+            *it = abs(*it2);
+        }else{
+            *it = abs(*it);
         }
     }
     // stretch
     Mat Sobel_image;
+    normalize(Sobel_tmpimage, Sobel_tmpimage, 0, 255, NORM_MINMAX);
     
     Sobel_tmpimage.convertTo(Sobel_image, CV_8UC1);
 
